@@ -67,9 +67,6 @@ int main(int argc, char** argv) {
     if (mac != NULL && parse_mac(mac, &dst) != 0) {
         fprintf(stderr, "Error: -b option: You have to specify a valid mac adress!\n");
         return 1;
-    } else if (read_default_mac(&dst) != 0) {
-        fprintf(stderr, "Error: Unable to read valid mac adress from ~/.awoxlrc file!\n");
-        return 1;
     }
 
     int c = -1;
